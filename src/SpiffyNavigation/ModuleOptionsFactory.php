@@ -2,8 +2,8 @@
 
 namespace SpiffyNavigation;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ModuleOptionsFactory implements FactoryInterface
 {
@@ -11,11 +11,12 @@ class ModuleOptionsFactory implements FactoryInterface
     /**
      * Create service
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param ContainerInterface $container
      * @throws \RuntimeException
      * @return ModuleOptions
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $serviceLocator,
+        $requestedName, array $options = null)
     {
         $config = $serviceLocator->get('Configuration');
 
