@@ -6,7 +6,7 @@ use Interop\Container\ContainerInterface;
 use SpiffyNavigation\ContainerFactory;
 use SpiffyNavigation\Provider\ArrayProvider;
 use SpiffyNavigation\Provider\ProviderFactory;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 class NavigationFactory implements FactoryInterface
 {
