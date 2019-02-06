@@ -21,7 +21,7 @@
         "zendframework/zend-eventmanager": "^3.0",
         "zendframework/zend-form": "~2.2",
         "zendframework/zend-modulemanager": "~2.2",
-        "zendframework/zend-mvc": "~2.2",
+        "zendframework/zend-mvc": "^3.0",
         "zendframework/zend-permissions-acl": "~2.2",
         "zendframework/zend-permissions-rbac": "~2.2",
         "zendframework/zend-serializer": "~2.2",
