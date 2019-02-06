@@ -35,4 +35,11 @@ class HelperConfig implements ConfigInterface
             });
         }
     }
+
+    public function toArray()
+    {
+        $ret = [
+            'factories' => $this->helpers,
+        ];
+    }
 }
