@@ -2,8 +2,8 @@
 
 namespace SpiffyNavigation\Provider;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;ß
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ProviderFactory implements FactoryInterface
 {
@@ -33,12 +33,13 @@ class ProviderFactory implements FactoryInterface
     /**
      * Create service
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param ContainerInterface $serviceLocator
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      * @return ProviderInterface
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $serviceLocator,
+        $requestedName, array $options = null)
     {
         $spec = $this->spec;
 

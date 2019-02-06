@@ -2,8 +2,8 @@
 
 namespace SpiffyNavigation\View;
 
+use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\ConfigInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\ServiceManager;
 
 class HelperConfig implements ConfigInterface
@@ -23,14 +23,14 @@ class HelperConfig implements ConfigInterface
      *
      * Adds the invokables defined in this class to the SM managing helpers.
      *
-     * @param  ServiceManager $serviceManager
+     * @param  ContainerInterface $container
      * @return void
      */
-    public function configureServiceManager(ServiceManager $serviceManager)
+    public function configureServiceManager(ContainerInterface $container)
     {
         foreach ($this->helpers as $name => $className) {
-            $serviceManager->setFactory($name, function(ServiceLocatorInterface $sm) use ($className) {
-                $class = new $className($sm->getServiceLocator()->get('SpiffyNavigation\Service\Navigation'));
+            $container->setFactory($name, function(ContainerInterface $sm) use ($className) {
+                $class = new $className($sm->get('SpiffyNavigation\Service\Navigation'));
 
                 return $class;
             });

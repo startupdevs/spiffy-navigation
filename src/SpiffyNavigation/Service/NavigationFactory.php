@@ -2,21 +2,22 @@
 
 namespace SpiffyNavigation\Service;
 
+use Interop\Container\ContainerInterface;
 use SpiffyNavigation\ContainerFactory;
 use SpiffyNavigation\Provider\ArrayProvider;
 use SpiffyNavigation\Provider\ProviderFactory;
 use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
 class NavigationFactory implements FactoryInterface
 {
     /**
      * Creates the Navigation service.
      *
-     * @param \Zend\ServiceManager\ServiceLocatorInterface $serviceLocator
+     * @param ContainerInterface $sm
      * @return Navigation
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $serviceLocator,
+        $requestedName, array $options = null)
     {
         /** @var \SpiffyNavigation\ModuleOptions $options */
         $options    = $serviceLocator->get('SpiffyNavigation\ModuleOptions');
