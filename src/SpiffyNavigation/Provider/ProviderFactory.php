@@ -2,7 +2,7 @@
 
 namespace SpiffyNavigation\Provider;
 
-use Interop\Container\ContainerInterface;ß
+use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ProviderFactory implements FactoryInterface
