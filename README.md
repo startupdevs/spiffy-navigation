@@ -1,15 +1,15 @@
-# SpiffyNavigation Module for Zend Framework 2
+# SpiffyNavigation Module for Zend Framework 3
 
-SpiffyNavigation is a navigation module for ZF2 intended to be a replacement for Zend\Navigation when ZF3 is able to break BC.
+This is a fork of spiffyjr/spiffy-navigation which was updated with the intent to support ZF3 for FXWeb. The www.fxnetworks.com site uses the SpiffyNavigation module for rendering the hamburger menu and populating the sitemap with items in that menu.
 
 ## Project Status
-[![Master Branch Build Status](https://secure.travis-ci.org/spiffyjr/spiffy-navigation.png?branch=master)](http://travis-ci.org/spiffyjr/spiffy-navigation)
-[![Coverage Status](https://coveralls.io/repos/spiffyjr/spiffy-navigation/badge.png?branch=master)](https://coveralls.io/r/spiffyjr/spiffy-navigation?branch=master)
+[![Master Branch Build Status](https://secure.travis-ci.org/startupdevs/spiffy-navigation.png?branch=master)](http://travis-ci.org/startupdevs/spiffy-navigation)
+[![Coverage Status](https://coveralls.io/repos/startupdevs/spiffy-navigation/badge.png?branch=master)](https://coveralls.io/r/startupdevs/spiffy-navigation?branch=master)
 
 
 ## Requirements
- - PHP 5.3 or higher
- - [Zend Framework 2](http://www.github.com/zendframework/zf2)
+ - PHP 5.6 or higher
+ - [Zend Framework 3](https://github.com/zendframework/zendframework) (now known as **Laminas**)
 
 ## Installation
 
@@ -24,7 +24,7 @@ Installation of SpiffyNavigation uses composer. For composer documentation, plea
      ```json
      {
          "require": {
-             "spiffy/spiffy-navigation": "dev-master"
+             "startupdevs/spiffy-navigation": "dev-master"
          }
      }
      ```

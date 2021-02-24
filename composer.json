@@ -1,6 +1,6 @@
 {
     "name": "spiffy/spiffy-navigation",
-    "description": "Fork of spiffy/spiffy-navigation for Zend Framework 3 / PHP 7.5+",
+    "description": "Fork of spiffy/spiffy-navigation for Zend Framework 3",
     "type": "library",
     "keywords": [
         "module",
